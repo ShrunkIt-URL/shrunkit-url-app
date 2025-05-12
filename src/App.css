@@ -1,3 +1,12 @@
+/*
+Paleta de colores:
+.color1 {color: #12090e;}
+.color2 {color: #332c45;}
+.color3 {color: #6d5e8e;}
+.color4 {color: #b398e0;}
+.color5 {color: #f7cded;}
+*/
+
 .App {
   text-align: center;
 }
@@ -9,7 +18,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 50s linear;
   }
 }
 
