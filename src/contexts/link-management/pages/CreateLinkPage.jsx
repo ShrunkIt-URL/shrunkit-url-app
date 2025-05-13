@@ -23,7 +23,7 @@ export const CreateLinkPage = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#f7cded", minHeight: "100vh", padding: "2rem" }}>
+    <div style={{ minHeight: "100vh", padding: "2rem" }}>
       <form onSubmit={handleSubmit} style={{ marginBottom: "2rem" }}>
         <input
           type="text"

@@ -1,0 +1,103 @@
+/*
+Paleta de colores:
+.color1 {color: #12090e;}
+.color2 {color: #332c45;}
+.color3 {color: #6d5e8e;}
+.color4 {color: #b398e0;}
+.color5 {color: #f7cded;}
+*/
+
+.header-container {
+  display: flex;
+  align-items: left;
+  background-color: #332c45;
+  color: #f7cded;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1px 10px 1px #12090e;
+  transition: all 0.7s ease-in-out;
+  user-select: none;
+}
+
+.header-container.header-animate {
+  background-color: #f7cded;
+  color: #12090e;
+  margin-bottom: 20px;
+  transition: all 0.7s ease-in-out;
+}
+
+.header-container:not(.header-animate) {
+  transform: translateY(110vh);
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(
+    circle at 160px 50%,
+    #f7cded 120px,
+    #734F96 350px,
+    #12090e 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header, .App-logo, .header-title {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  
+}
+
+.App-logo {
+  filter: drop-shadow(0 0 2px #12090e)
+}
+
+.header-title {
+  font-family: cursive;
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0 2px #12090e;
+}
+
+
+.header-container.header-scrolled {
+  opacity: 0.9;
+  height: 4rem;
+  margin-bottom: 4rem;
+  transition: background 0.4s, height 0.4s, padding 0.4s;
+}
+
+.header-container.header-scrolled .header-title {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.header-container.header-scrolled .App-logo {
+  width: 40px;
+  transition: width 0.3s;
+}
+
+.header-container .App-logo {
+  width: 60px;
+  transition: width 0.3s;
+}
+
+.header-container {
+  height: 100px;
+  transition: background 0.4s, height 0.4s, padding 0.4s;
+}
